@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    justify-content: center;
+    font-size:16px;
+    background: linear-gradient(-45deg,#ffc964, #f8c15c, #ffba3b, orange);}
+
+.contenedor{
+width: 100%;
+width: 80%;}
+
+.redes{
+display: flex;
+justify-content: right;
+width: 30px;
+height: 30px;
+margin: 5px;
+width: 80%;}
+
+.logog{
+display: flex;
+justify-content: center;
+width: 250px;
+height: 250px;
+margin: 1px;
+width: 80%;}
+  
+.contacto{
+    background-image: url(img/herramientas.jpg);
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    background-color: gray;
+    color: white;
+    height: 20vh;
+    width: 100%;
+    bottom: 0;
+}
+
+.suscripcion{
+    width: 80%;}
+
+h5{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 80%;}
+
+
+main {
+	max-width: 900px;
+	width: 90%;
+	margin: auto;
+	padding: 45px;
+}
+
+.inicio{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 90%;}
