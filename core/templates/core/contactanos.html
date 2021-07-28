@@ -1,0 +1,43 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Contactanos</title>
+{% endblock%} 
+ 
+<!--Logo y redes sociales-->
+<!--Menu-->
+{% block content %} 
+ <!--Menú de contacto-->
+<div class="contenedor">
+  <br>
+   <div class="contacto">
+      <div class="Formulario">
+       <br>
+       <h3><strong>¡Contactanos!</strong></h3>
+       <br>
+       <div class="row">
+         <div class="col-12 col-md-6 col-xl-3">
+           <input type="text" name="Nombre" placeholder="Nombre" size="40" >
+           <br><br>
+           <input type="text" name="Rut (con puntos y guión)" placeholder="Rut" size="40" >
+           <br><br>
+           <input type="text" name="Correo" placeholder="Correo" size="40" >
+           <br><br>
+           <textarea name="Mensaje" placeholder="Escriba aquí su mensaje" size="40" ></textarea>
+           <br><br>
+           <input type="button" onclick="validarFormularios()" value="Enviar" id="boton">
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+</div>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src=" {% static 'core/js/FormularioContacto.js'%}"></script>
+{% endblock%} 
+
+
+     
+

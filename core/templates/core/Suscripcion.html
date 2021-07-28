@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo %}
+<title>Suscripcion</title>
+{% endblock%} 
+ 
+<!--Logo y redes sociales-->
+<!--Menu-->
+{% block content %} 
+<!--suscripcion-->
+<div class="contenedor">
+  <br>
+  <div class="suscripcion">
+    <br>
+    <h3><strong>Suscríbete para recibir información sobre nuestros productos.</strong></h3>
+    <br>
+    <form action="#">
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-3">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="ejemplo@gmail.com">
+        </div>
+        <br>
+        <div class="col-12 col-md-6 col-xl-3">
+          <label for="email">Donacion:</label>
+          <input type="email" name="donacion" id="doncacion" class="form-control" placeholder="">
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary">Suscribirse</button>
+    </form>
+  </div>
+  <br>
+</div>
+{% endblock%} 
+
+
+        

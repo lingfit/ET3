@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+    {% block titulo %}
+{% endblock%} 
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+
+    <div class="contenedor">
+<!--Logo y redes sociales-->
+        <div class="row header">
+            <div class="redess">
+            <div class="col-12 col-md-6 col-xl-3 redes">
+                <img src="{% static 'core/img/twitter_circled_30px.png' %}" alt="twitter">
+                <img src="{% static 'core/img/facebook_circled_50px_1.png' %}" alt="facebook">
+                <img src="{% static 'core/img/instagram_50px_2.png' %}" alt="instagram">
+            </div> 
+            </div>
+            <div class="logog">
+            <div class="col-12 col-md-6 col-xl-3 logog">
+                <img src="{% static 'core/img/logo2.png' %}" alt="">
+                </div>
+            </div>
+<!--MENU-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'contactanos' %}">Contactanos</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Articulos y Accesorios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="{% url 'Bandanas' %}">Bandanas</a></li>
+                      <li><a class="dropdown-item" href="{% url 'collares' %}">Collares</a></li>
+                      <li><a class="dropdown-item" href="{% url 'correas' %}">Correas</a></li>
+                      <li><a class="dropdown-item" href="{% url 'identificaciones' %}">identificaciones</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'Suscripcion' %}">Suscripcion</a>
+                  </li>
+                  <li class="nav dropdown">
+           
+                    <a class="nav-link dropdown active" style="color: rgb(95, 95, 95);" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Usuario
+        
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="{% url 'home' %}">Perfil Usuario</a></li>
+                        <li><a class="dropdown-item" href="{% url 'iniciosesion' %}">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="{% url 'registro' %}">Registro</a></li>          
+                      </ul>
+                    </a>
+                  </li>
+
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <br>
+{% block content %} 
+{% endblock%}
+
+<footer>
+    <br>
+    © 2021 Copyright:
+    PET SHOP 2021 todos los derechos reservados.
+    <br>
+    <img class="pago" src="{% static 'core/img/pagos_web.png' %}" alt="PAGO">
+{% block footer %} 
+{% endblock%}
+</footer>
+
+</div>
+</div>
+</body>
+</html>

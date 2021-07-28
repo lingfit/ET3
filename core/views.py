@@ -29,3 +29,6 @@ def correas(request):
 
 def identificaciones(request):
     return render(request, 'core/identificaciones.html')
+
+def homeApi(request):
+    return render(request, 'core/homeApi.html')

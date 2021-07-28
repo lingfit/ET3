@@ -11,5 +11,5 @@ urlpatterns = [
     path('collares', views.collares, name="collares"),
     path('correas', views.correas, name="correas"),
     path('identificaciones', views.identificaciones, name="identificaciones"),
-    
+    path('homeApi', views.homeApi, name="homeApi"),
 ]
