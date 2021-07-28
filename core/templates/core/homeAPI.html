@@ -1,16 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'core/css/estiloapi.css' %}">
-</head>
-<body>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block titulo %}
+<link rel="stylesheet" href="{% static 'core/css/estiloapi.css' %}">
+<title>Maps</title>
+{% endblock%} 
+
+{% block content %} 
+    <div class="contenedor">
     <div id="map"></div>
+    <br>
+       <h3><strong>Maps</strong></h3>
+       <br>
+
     <script src="{% static 'core/js/API.js'%}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
-</body>
-</html>
+</div>
+
+{% endblock%} 
